@@ -37,4 +37,19 @@ int main()
       cout << (intBST.search(number) ? "Found" : "Not found") << endl;
    }
 
+   cout << "\n--------------------TESTING--------------------";
+      cout << endl;
+      // Testing inOrder traversal
+      cout << "\nTesting inOrder(): ";
+      intBST.inOrder(cout);
+
+      // Testing preOrder traversal
+      cout << "\nTesting preOrder(): ";
+      intBST.preOrder(cout);
+
+      // Testing nodeCount()
+      cout << "\nTesting nodeCount = ";
+      cout << intBST.countNode();
+      cout << endl;
+
 }

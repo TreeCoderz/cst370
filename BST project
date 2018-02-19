@@ -1,0 +1,20 @@
+
+1. Download the source programs for Binary Search Tree (BST.cpp, BST.h, and Sample_BST_tester.cpp)
+from iLearn.
+
+(a) Change the current search() function to a recursive version.
+
+(b) Add a new member function called inOrder() that implements the inorder traversal algorithm
+of a binary search tree. Your function should display each node data on the screen.
+void BST::inOrder()
+
+(c) Add a new member function called preOrder() that implements the preorder traversal algorithm
+of a binary search tree. Your function should display each node data on the screen.
+void BST::preOrder()
+
+(d) Add a new member function called nodeCount() to count the number of nodes in a binary
+search tree. In this function, you should use a recursive function. You can’t just use a variable
+such as “mySize”.
+int BST::nodeCount()
+
+(e) Update the Sample_BST_tester.cpp to show the execution of the functions. 

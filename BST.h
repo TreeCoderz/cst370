@@ -12,6 +12,9 @@ class BST
   bool empty() const;
   bool search(const int & item) const;
   void insert(const int & item);
+  void inOrder(ostream & out) const;
+  void preOrder(ostream & out) const;
+  int countNode();
 
  private:
   /***** Node class *****/
@@ -37,6 +40,10 @@ class BST
 
   /***** Data Members *****/
   BinNode * myRoot;
+  bool searchRecursive(BinNode * locptr, const int & item) const;
+  void inOrderBin(ostream & out, BinNode * locptr) const;
+  void preOrderBin(ostream & out, BinNode * locptr) const;
+  int nodeCountBin(BinNode * locptr);
 
 }; // end of class declaration
 

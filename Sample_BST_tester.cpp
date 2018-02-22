@@ -35,7 +35,6 @@ bool checkExists(int element, int arr[], int size){
 int main()
 {
    // Testing Constructor and empty()
-   BST intBST;            // test the class constructor
    BST sortedBST;
    int acc = 0;
    int inputArray[MAX_INTEGER];
@@ -54,8 +53,6 @@ int main()
       cout << "Item to insert (-999 to stop): ";
       cin >> number;
       if (number == -999) break;
-
-      intBST.insert(number);
 
       if(checkExists(number, inputArray, acc)){
         cout << "Element already exists" << endl;

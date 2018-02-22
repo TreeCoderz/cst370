@@ -48,7 +48,7 @@ void BST::insert(const int & item)
    }
    if (!found)
    {                                 // construct node containing item
-      locptr = new BinNode(item);  
+      locptr = new BinNode(item);
       if (parent == 0)               // empty tree
          myRoot = locptr;
       else if (item < parent->data )  // insert to left of parent
@@ -58,4 +58,33 @@ void BST::insert(const int & item)
    }
    else
       cout << "Item already in the tree\n";
+}
+
+
+// PART 2
+//inOrder def
+void BST::inOrder(ostream & out) const
+{
+	inOrderBin(out, myRoot);// gives node in non-decreasing order
+}
+
+void BST::inOrderBin(ostream &out, BinNode *locptr) const
+{
+	if(empty())
+	{
+		cout << "Binary Tree is empty";
+	}
+
+	else if (locptr != NULL)
+	{
+		inOrderBin(out,locptr->left);
+		out << locptr ->data << " ";
+		inOrderBin(out, locptr->right);
+	}
+}
+
+//PART 3
+//LeafHeights def
+{
+	
 }

@@ -78,9 +78,12 @@ int main()
   
 
    cout << "\n Check:";
-         cout << endl;
-         // Testing inOrder traversal
-         cout << "\nTesting inOrder(): " << endl;
-         sortedBST.inOrder(cout);
-	 cout << endl;
+   cout << endl;
+   // Testing inOrder traversal
+   cout << "\nTesting inOrder(): " << endl;
+   sortedBST.inOrder(cout);
+   cout << endl << endl;
+
+   cout << "Part 3:" << endl;
+   sortedBST.LeafHeights();
 }

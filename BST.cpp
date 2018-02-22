@@ -83,8 +83,23 @@ void BST::inOrderBin(ostream &out, BinNode *locptr) const
 	}
 }
 
+void BST::LeafHeights(){
+  LeafHeights(myRoot, 0);
+}
+
 //PART 3
-//LeafHeights def
-//{
-	
-  //}
+void BST::LeafHeights(BinNode * start, int level)
+{
+  BinNode * locptr = start;
+  int height = level;
+  if(locptr->left != NULL){
+    LeafHeights(locptr->left, height+1);
+  }
+  if(locptr->right != NULL){
+    LeafHeights(locptr->right, height+1);
+  }
+  if (locptr->left == NULL && locptr->right == NULL){
+    cout << "Height of leaf \"" << locptr->data << "\": " << height << endl;
+  }
+  return;
+}

@@ -13,6 +13,7 @@ class BST
   bool search(const int & item) const;
   void insert(const int & item);
   void inOrder(ostream & out) const;
+  void LeafHeights();
 
  private:
   /***** Node class *****/
@@ -39,7 +40,7 @@ class BST
   /***** Data Members *****/
   BinNode * myRoot;
   void inOrderBin(ostream & out, BinNode * locptr) const;
-
+  void LeafHeights(BinNode *, int);
 }; // end of class declaration
 
 #endif

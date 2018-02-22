@@ -85,6 +85,6 @@ void BST::inOrderBin(ostream &out, BinNode *locptr) const
 
 //PART 3
 //LeafHeights def
-{
+//{
 	
-}
+  //}

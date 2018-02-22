@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;  
+using namespace std;
 
 #ifndef BINARY_SEARCH_TREE
 #define BINARY_SEARCH_TREE
@@ -10,12 +10,13 @@ class BST
   /***** Function Members *****/
   BST();
   bool empty() const;
-  bool search(const int & item) const; 
+  bool search(const int & item) const;
   void insert(const int & item);
-  
+  void inOrder(ostream & out) const;
+
  private:
   /***** Node class *****/
-  class BinNode 
+  class BinNode
   {
    public:
     int data;
@@ -32,11 +33,12 @@ class BST
     BinNode(int item)
     : data(item), left(0), right(0)
     {}
- 
+
   };// end of class BinNode declaration
-  
+
   /***** Data Members *****/
-  BinNode * myRoot; 
+  BinNode * myRoot;
+  void inOrderBin(ostream & out, BinNode * locptr) const;
 
 }; // end of class declaration
 
